@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      APP LINK SOCIAL
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+<!--         <ion-item>
+          <ion-label stacked>MAC</ion-label>
+          <ion-input [(ngModel)]="mac" type="text" value=""></ion-input>
+        </ion-item> -->
+
+        <ion-item>
+          <ion-label>Mac</ion-label>
+          <ion-select [(ngModel)]="macs.mac">
+            <ion-option *ngFor="let macs of lista" >{{macs.mac}}</ion-option>
+          </ion-select>
+        </ion-item>
+
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button (click)="getSimilaridadesApp()">Verificar</button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
